@@ -1,0 +1,3 @@
+# For use with spring (https://github.com/zimbatm/direnv)
+# For direnv (https://github.com/zimbatm/direnv#the-stdlib)
+PATH_add bin
