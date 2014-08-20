@@ -20,6 +20,7 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: andy 
 
 development:
   <<: *default
@@ -55,7 +56,7 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: &test
   <<: *default
   database: saddleswap_test
 
@@ -78,8 +79,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: saddleswap_production
-  username: saddleswap
-  password: <%= ENV['SADDLESWAP_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: saddleswap_production
+#   username: saddleswap
+#   password: <%= ENV['SADDLESWAP_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test
