@@ -1,7 +1,11 @@
-
+require 'coderay'
 module SH
   def some
     3
+  end
+
+  def peek
+    print CodeRay.scan(page.body, :html).term
   end
 end
 World SH
@@ -14,9 +18,9 @@ module SaddleSH
   def default_saddle
     {
       manufacturer: 'Fizik',
-      model: 'Arione',
+      model: 'Arione'
     }
-    end
+  end
 end
 World SaddleSH
 
@@ -25,10 +29,10 @@ Given(/^there are some saddles$/) do
 end
 
 When(/^I view saddles$/) do
-    pending # express the regexp above with the code you wish you had
+  visit saddles_path
 end
 
 Then(/^I should see some saddles$/) do
-    pending # express the regexp above with the code you wish you had
+  expect(page).to have_css '.saddles .saddle', count: some
 end
 
