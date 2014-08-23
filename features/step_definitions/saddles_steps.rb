@@ -12,7 +12,7 @@ World SH
 
 module SaddleSH
   def create_saddle
-    Saddle.create(default_saddle)
+    Saddle.create({model: "Wibble"})
   end
 
   def default_saddle
