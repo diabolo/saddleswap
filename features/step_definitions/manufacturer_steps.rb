@@ -9,9 +9,13 @@ module ManufacturerSH
     Manufacturer.create(man)
   end
 
+  def default_manufacturer
+    { name: 'Fizik' }
+  end
+
   def some_manufacturers
     [
-      { name: 'Fizik' },
+      default_manufacturer,
       { name: 'Specialized' },
       { name: 'Selle Italia '}
     ]
