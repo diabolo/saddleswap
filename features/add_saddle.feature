@@ -5,6 +5,6 @@ Feature: Add a saddle
 
 
   Scenario: Add a saddle
-    Given there are some manufacturers
+    Given there are some brands
     When I add a saddle
     Then a saddle should be added

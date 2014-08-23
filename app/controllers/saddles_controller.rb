@@ -35,7 +35,7 @@ class SaddlesController < ApplicationController
 
   def saddle_params
     saddle_params = params[:saddle]
-    saddle_params ? saddle_params.permit(:manufacturer) : {}
+    saddle_params ? saddle_params.permit(:brand) : {}
   end
 
   def saddle_scope

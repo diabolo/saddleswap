@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 20140821093900) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "manufacturers", force: true do |t|
+  create_table "brands", force: true do |t|
     t.string "name"
   end
 
   create_table "saddles", force: true do |t|
     t.string  "model"
-    t.integer "manufacturer_id"
+    t.integer "brand_id"
   end
 
 end

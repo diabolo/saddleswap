@@ -22,7 +22,7 @@ module SaddleSH
   def add_saddle(attrs={})
     saddle = default_saddle.merge(attrs)
     visit new_saddle_path
-    select saddle[:manufacturer], from: Manufacturer
+    select saddle[:brand], from: Brand
     fill_in 'Model', with: saddle[:model]
     submit_form
   end
@@ -33,7 +33,7 @@ module SaddleSH
 
   def default_saddle
     {
-      manufacturer: default_manufacturer[:name],
+      brand: default_brand[:name],
       model: 'Arione'
     }
   end
