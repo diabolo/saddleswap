@@ -41,6 +41,11 @@ module SaddleSH
   def saddle_should_be_added
     expect(page).to have_css('.saddle')
     should_see_success_message
+    should_see_saddle_details
+  end
+
+  def should_see_saddle_details
+    expect(page.find('.model').text.strip).to_not be_blank
   end
 end
 World SaddleSH
