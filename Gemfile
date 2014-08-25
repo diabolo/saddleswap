@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml-rails'
 gem 'active_type'
 gem 'simple_form'
+gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -48,6 +49,8 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'byebug'
+
+  gem 'rails_layout'
 end
 
 group :test do

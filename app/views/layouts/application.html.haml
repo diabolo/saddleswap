@@ -1,12 +1,17 @@
 !!!
 %html
   %head
-    %title Saddleswap
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Saddleswap'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Saddleswap'}"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    -# Modernizr is required for Zurb Foundation
+    = javascript_include_tag 'vendor/modernizr'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .alerts
-      - flash.each do |key, value|
-        %div{:class => "alert alert-#{key}"}= value
-    = yield
+    %header
+      = render 'layouts/navigation'
+    %main{:role => "main"}
+      = render 'layouts/messages'
+      = yield

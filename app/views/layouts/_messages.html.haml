@@ -1,0 +1,6 @@
+-# Rails flash messages styled for Zurb Foundation
+- flash.each do |key, msg|
+  - if msg.is_a?(String)
+    %div{:class => "alert-box #{key}", "data-alert" => ""}
+      .msg= msg
+      %a.close{:href => "#"} &times;

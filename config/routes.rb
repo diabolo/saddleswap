@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # must have root path for layout
+  root 'saddles#index'
+
   resources :brands, only: :index
   resources :saddles, only: [:index, :show, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
