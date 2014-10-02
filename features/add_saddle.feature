@@ -4,7 +4,16 @@ Feature: Add a saddle
   So that people can swap a saddle
 
 
-  Scenario: Add a saddle
+  Background:
     Given there are some brands
+
+  Scenario: Add a saddle
     When I add a saddle
     Then a saddle should be added
+
+    @wip
+  Scenario: Add a saddle with an image
+    When I add a saddle with an image
+    Then a saddle should be added
+
+
