@@ -53,6 +53,7 @@ group :development, :test do
   gem 'rails_layout'
 
   gem 'rails-pry'
+  gem 'pry-byebug', '~> 2.0.0'
   gem 'pry-remote'
 end
 
