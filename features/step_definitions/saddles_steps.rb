@@ -23,6 +23,13 @@ module SH
 end
 World SH
 
+module AttachmentSH
+  def attachment
+    File.join(Rails.root, 'fixtures', 'images', 'default_saddle.png')
+  end
+end
+World AttachmentSH
+
 module SaddleSH
   def add_saddle(attrs={})
     fill_in_saddle_details
@@ -43,7 +50,7 @@ module SaddleSH
   end
 
   def add_image
-    binding.pry
+    attach_file :saddle_image, attachment
   end
 
   def create_saddle
@@ -65,6 +72,7 @@ module SaddleSH
 
   def should_see_saddle_details
     expect(page.find('.model').text.strip).to_not be_blank
+    expect(page).to have_css '.image img'
   end
 end
 World SaddleSH

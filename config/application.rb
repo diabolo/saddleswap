@@ -30,5 +30,7 @@ module Saddleswap
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
 
+    # For Carrierwave
+    config.autoload_paths += %W(#{config.root}/app/uploaders)
   end
 end

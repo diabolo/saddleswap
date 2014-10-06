@@ -11,7 +11,6 @@ Feature: Add a saddle
     When I add a saddle
     Then a saddle should be added
 
-    @wip
   Scenario: Add a saddle with an image
     When I add a saddle with an image
     Then a saddle should be added

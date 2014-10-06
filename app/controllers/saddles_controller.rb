@@ -39,7 +39,7 @@ class SaddlesController < ApplicationController
 
   def saddle_params
     saddle_params = params[:saddle]
-    saddle_params ? saddle_params.permit(:model, :brand) : {}
+    saddle_params ? saddle_params.permit(:model, :brand, :image) : {}
   end
 
   def saddle_scope

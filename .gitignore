@@ -17,3 +17,4 @@
 .rvmrc
 .envrc
 config/database.yml
+public/uploads

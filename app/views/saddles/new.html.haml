@@ -1,6 +1,7 @@
 .saddle
-  = simple_form_for @saddle do |f|
+  = simple_form_for @saddle, html: {multipart: true} do |f|
     = f.input :model
     = f.association :brand
+    = f.file_field :image
     = f.button :submit
 
