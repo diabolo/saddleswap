@@ -28,6 +28,8 @@ gem 'active_type'
 gem 'simple_form'
 gem 'foundation-rails'
 
+gem 'carrierwave', '~> 0.10.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
